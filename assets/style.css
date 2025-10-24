@@ -1,187 +1,83 @@
-/* 🌈 Variables base */
-:root {
-  --accent: #1f6feb;
-  --bg: #061025;
-  --card: #07122b;
-  --muted: #94a3b8;
-  --text: #e6eef8;
+:root{
+  --accent:#1f6feb;
+  --bg:#061025;
+  --card:#07122b;
+  --muted:#94a3b8;
+  --text:#e6eef8;
 }
 
-/* 🔄 Reset general */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* RESET */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--bg),#07112a);color:var(--text);line-height:1.6;scroll-behavior:smooth}
 
-html, body {
-  height: 100%;
-  font-family: 'Inter', system-ui, Arial, sans-serif;
-  background: linear-gradient(180deg, var(--bg), #07112a);
-  color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
+/* Contenedor */
+.container{max-width:1000px;margin:0 auto;padding:20px}
 
-/* 🧱 Contenedor */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* 🧭 ENCABEZADO */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: transparent; /* ✨ Transparente al inicio */
-  transition: all 0.4s ease;
-  z-index: 1000;
+/* HEADER (fijo) */
+.site-header{
+  position:fixed;
+  top:0;left:0;width:100%;z-index:1000;
+  background:transparent;
+  transition:background 0.35s ease, box-shadow 0.35s ease, padding 0.25s ease;
   backdrop-filter: blur(6px);
 }
-
-.site-header.scrolled {
-  background: rgba(7, 17, 43, 0.95); /* 💎 Fonde oscuro al bajar */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+.site-header.scrolled{
+  background:var(--card);
+  box-shadow:0 6px 22px rgba(0,0,0,0.45);
+  padding-bottom:6px;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
-  gap: 16px;
+/* Header inner */
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px}
+
+/* Brand */
+.brand{display:flex;align-items:center;gap:12px;min-width:0;flex:0 0 auto}
+.logo-utp{width:52px;height:52px;object-fit:contain;border-radius:8px;display:block;background:transparent;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-text .muted{color:var(--muted);font-size:12px}
+.project-title{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px}
+
+/* NAV */
+.main-nav{flex:1 1 auto;display:flex;justify-content:flex-end;align-items:center;overflow-x:auto;padding-left:18px}
+.main-nav ul{display:flex;gap:14px;align-items:center;list-style:none;margin:0;padding:0;white-space:nowrap}
+.main-nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px;display:inline-block;transition:background 0.2s}
+.main-nav a:hover, .main-nav a.active{background:rgba(255,255,255,0.06)}
+
+/* Oculta nav que esté fuera del header (fallback) */
+body > nav.main-nav{display:none!important}
+
+/* HERO / SIDE CARD */
+.hero{margin-top:24px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.02);display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px;margin-bottom:16px}
+.side-card{background:rgba(255,255,255,0.015);padding:14px;border-radius:10px}
+.hero-main h1{margin-bottom:12px}
+
+/* CONTENT */
+.content-box{background:rgba(255,255,255,0.03);border-radius:12px;padding:20px;margin-bottom:24px;box-shadow:0 0 10px rgba(0,0,0,0.18)}
+.content-box h1,.content-box h2{color:var(--accent);margin-bottom:12px}
+.content-box p{margin-bottom:12px}
+.content-box ul{margin-left:20px}
+
+/* IMAGES */
+.img-tesla{width:100%;max-width:320px;height:auto;border-radius:10px;display:block;margin:0 auto 10px auto;box-shadow:0 6px 16px rgba(0,0,0,0.35)}
+
+/* FOOTER */
+.site-footer{padding:18px;text-align:center;color:var(--muted);margin-top:32px;border-top:1px solid rgba(255,255,255,0.03);font-size:0.95rem}
+
+/* Ajuste para que el contenido no quede bajo el header fijo */
+main{padding-top:110px}
+
+/* Responsive */
+@media(max-width:900px){
+  .header-inner{padding:10px 14px}
+  .logo-utp{width:44px;height:44px}
+  .project-title{max-width:160px}
+  .main-nav ul{gap:10px}
+  .hero{grid-template-columns:1fr;padding:16px}
+  main{padding-top:140px}
 }
 
-/* 🔹 Logo y texto */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+/* Fallback visual si logo no carga */
+.logo-utp:empty, .logo-utp[onerror]{background:linear-gradient(135deg,var(--accent),#7c3aed)}
 
-.logo-utp {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-text .muted {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.project-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-/* 📋 Navegación */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* 🚨 Compensar header fijo */
-main {
-  padding-top: 120px;
-}
-
-/* 📦 Secciones */
-.content-box {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 24px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.content-box h1,
-.content-box h2 {
-  color: #7ca9ff;
-  margin-bottom: 10px;
-}
-
-.content-box ul {
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.content-box li {
-  margin-bottom: 6px;
-}
-
-/* 🖼️ Imagen */
-.image-section {
-  text-align: center;
-}
-
-.img-tesla {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px auto;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* ⚙️ Footer */
-.site-footer {
-  padding: 18px;
-  text-align: center;
-  color: var(--muted);
-  margin-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* 📱 Responsivo */
-@media (max-width: 880px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-nav ul {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo-utp {
-    width: 44px;
-    height: 44px;
-  }
-
-  .project-title {
-    font-size: 0.95rem;
-  }
-
-  .content-box {
-    padding: 15px;
-  }
-}
 
