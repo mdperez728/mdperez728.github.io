@@ -31,19 +31,21 @@ html, body {
 
 /* 🧭 ENCABEZADO */
 .site-header {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: sticky;
+  background: var(--card);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: fixed;        /* ✅ Fijo, no se mueve */
   top: 0;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 12px 24px;
   gap: 16px;
 }
 
@@ -91,8 +93,6 @@ html, body {
   justify-content: flex-end;
   gap: 14px;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 }
 
 .main-nav a {
@@ -115,6 +115,11 @@ html, body {
   padding: 20px;
   margin-bottom: 24px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🚨 Compensar el header fijo */
+main {
+  padding-top: 110px;
 }
 
 .content-box h1,
@@ -180,3 +185,4 @@ html, body {
     padding: 15px;
   }
 }
+
