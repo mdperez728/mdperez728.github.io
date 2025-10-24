@@ -1,67 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bobina de Tesla - Inicio</title>
-  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
-  <!-- 🧭 ENCABEZADO -->
-  <header class="site-header" id="navbar">
-    <div class="container header-inner">
+  <!-- HEADER -->
+  <header id="navbar" class="site-header">
+    <div class="header-inner container">
       <div class="brand">
-        <img src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp">
-        <div class="brand-text">
+        <!-- Imagen real preferible: assets/logo-uni.png -->
+        <img id="logo-img" src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp"
+             onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block'">
+        <!-- Fallback SVG si no subiste logo-uni.png -->
+        <svg id="logo-fallback" class="logo-utp" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1f6feb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+          <rect rx="14" ry="14" width="100" height="100" fill="url(#g1)"/>
+          <text x="50" y="58" font-family="Segoe UI, Arial" font-weight="700" font-size="34" text-anchor="middle" fill="#fff">UTP</text>
+        </svg>
+
+        <div class="brand-text" title="Bobina de Tesla — Física II">
           <div class="muted">Proyecto</div>
           <strong class="project-title">Bobina de Tesla — Física II</strong>
         </div>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Navegación principal">
         <ul>
-          <li><a href="/index.html" class="active">Inicio</a></li>
-          <li><a href="/integrante.html">Integrante</a></li>
-          <li><a href="/descripcion.html">Descripción</a></li>
-          <li><a href="/estado.html">Estado del arte</a></li>
-          <li><a href="/ecuaciones.html">Ecuaciones</a></li>
-          <li><a href="/galeria.html">Galería</a></li>
-          <li><a href="/contacto.html">Contacto</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="integrante.html">Integrante</a></li>
+          <li><a href="descripcion.html">Descripción</a></li>
+          <li><a href="estado.html">Estado del arte</a></li>
+          <li><a href="ecuaciones.html">Ecuaciones</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- 🧩 CONTENIDO PRINCIPAL -->
+  <!-- MAIN -->
   <main class="container">
-    <section class="content-box">
-      <h1>Bienvenido al Proyecto Bobina de Tesla</h1>
-      <p>Este proyecto tiene como objetivo comprender y experimentar los principios del electromagnetismo a través de la construcción de una bobina de Tesla funcional.</p>
+    <!-- HERO -->
+    <section class="hero card">
+      <div class="hero-main">
+        <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
+
+        <h2>¿Quién fue Nikola Tesla?</h2>
+        <p>
+          <strong>Nikola Tesla</strong> (1856–1943) fue un inventor y físico serbio-estadounidense.
+          Fue pionero en la corriente alterna (CA), el motor de inducción y en experimentos de alta frecuencia y alta tensión.
+          Sus investigaciones sobre resonancia y transformadores resonantes llevaron al desarrollo de la <em>bobina de Tesla</em>.
+        </p>
+
+        <h3>Aportes clave y cómo se llega a la bobina</h3>
+        <ul>
+          <li>Desarrollo del sistema polifásico de corriente alterna para transmisión eficiente de energía.</li>
+          <li>Diseño del motor de inducción y estudios sobre campos magnéticos variables.</li>
+          <li>Investigación en resonancia eléctrica y transformadores de alta frecuencia.</li>
+          <li>Construcciones experimentales que desembocaron en la bobina: transformador resonante para generar alto voltaje a alta frecuencia.</li>
+        </ul>
+
+        <p class="muted">En la entrega final añadiremos mediciones, cálculos LC y la comparación teoría/experimento.</p>
+      </div>
+
+      <aside class="side-card">
+        <!-- Foto real preferible: assets/tesla.jpg -->
+        <img id="tesla-img" src="assets/tesla.jpg" alt="Nikola Tesla" class="img-tesla"
+             onerror="this.style.display='none';document.getElementById('tesla-fallback').style.display='block'">
+        <!-- Fallback SVG placeholder -->
+        <svg id="tesla-fallback" class="img-tesla" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
+          <rect width="100%" height="100%" rx="10" fill="#071028"/>
+          <g transform="translate(16,28)" fill="#cfe8ff" font-family="Segoe UI, Arial">
+            <text x="0" y="18" font-size="16" font-weight="700">Nikola Tesla</text>
+            <text x="0" y="40" font-size="12" fill="#94a3b8">(sustituir por foto real)</text>
+          </g>
+        </svg>
+
+        <p style="font-size:14px;color:var(--muted);margin-top:10px">
+          Tesla exploró la resonancia eléctrica y el comportamiento de transformadores a alta frecuencia.
+          La bobina de Tesla es un transformador resonante que permite estudiar descargas y campos eléctricos en alta frecuencia.
+        </p>
+      </aside>
     </section>
 
-    <section class="content-box image-section">
-      <img src="assets/tesla.jpg" alt="Bobina de Tesla" class="img-tesla">
-      <p>La bobina de Tesla es un transformador resonante capaz de generar descargas eléctricas de alto voltaje, demostrando fenómenos de inducción y resonancia.</p>
+    <!-- OBJETIVOS -->
+    <section class="content-box card">
+      <h2>Objetivos de la práctica</h2>
+      <ul>
+        <li>Construir una bobina de Tesla a pequeña escala como demostración de fenómenos electromagnéticos.</li>
+        <li>Determinar y comparar la frecuencia de resonancia experimental con la predicción teórica (cálculo LC).</li>
+        <li>Medir y documentar las variaciones de tensión entre primario y secundario (cuando sea seguro).</li>
+        <li>Analizar el efecto de parámetros constructivos (número de espiras, geometría del toroide, capacitancia).</li>
+        <li>Aplicar normas de seguridad para el trabajo con alta tensión y documentar procedimientos.</li>
+      </ul>
     </section>
   </main>
 
-  <!-- ⚙️ PIE DE PÁGINA -->
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2025 Proyecto Bobina de Tesla — Universidad Tecnológica de Pereira</p>
+    <div class="container">
+      <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II · [TU NOMBRE]</p>
+    </div>
   </footer>
 
-  <!-- 🧠 SCRIPT PARA EFECTO DE BARRA -->
+  <!-- SCRIPTS -->
   <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+    // 1) Evita nav duplicadas (si hay más de una). Conserva la que esté dentro del header.
+    (function(){
+      try {
+        const navs = Array.from(document.querySelectorAll('nav.main-nav'));
+        if(navs.length > 1){
+          let keep = navs.find(n => n.closest('header')) || navs[0];
+          navs.forEach(n => { if(n !== keep) n.remove(); });
+          console.log('Nav cleanup: removed duplicates.');
+        }
+      } catch(e){ console.warn('Nav cleanup error', e); }
+    })();
+
+    // 2) Efecto header: transparente arriba → sólido al hacer scroll
+    (function(){
+      const navbar = document.getElementById('navbar');
+      const onScroll = () => {
+        if(window.scrollY > 60) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
   </script>
 </body>
 </html>
+
