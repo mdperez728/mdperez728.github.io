@@ -1,124 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Bobina de Tesla - Inicio</title>
-  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-  <!-- ENCABEZADO -->
-  <header class="site-header">
+  <!-- 🧭 ENCABEZADO -->
+  <header class="site-header" id="navbar">
     <div class="container header-inner">
       <div class="brand">
-        <!-- SVG INLINE: logo UTP (no necesitas subir archivo) -->
-        <svg class="logo-utp" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo UTP">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#1f6feb"/>
-              <stop offset="1" stop-color="#7c3aed"/>
-            </linearGradient>
-          </defs>
-          <rect rx="14" ry="14" width="100" height="100" fill="url(#g1)"/>
-          <text x="50" y="58" font-family="Segoe UI, Arial" font-weight="700" font-size="34" text-anchor="middle" fill="#fff">UTP</text>
-        </svg>
-
-        <div class="brand-text" title="Bobina de Tesla — Física II">
+        <img src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp">
+        <div class="brand-text">
           <div class="muted">Proyecto</div>
-          <strong class="project-title">Bobina de Tesla</strong>
+          <strong class="project-title">Bobina de Tesla — Física II</strong>
         </div>
       </div>
 
-      <!-- MENÚ DE NAVEGACIÓN -->
-      <nav class="main-nav" aria-label="Navegación principal">
+      <nav class="main-nav">
         <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="integrante.html">Integrante</a></li>
-          <li><a href="descripcion.html">Descripción</a></li>
-          <li><a href="estado.html">Estado del arte</a></li>
-          <li><a href="ecuaciones.html">Ecuaciones</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="/index.html" class="active">Inicio</a></li>
+          <li><a href="/integrante.html">Integrante</a></li>
+          <li><a href="/descripcion.html">Descripción</a></li>
+          <li><a href="/estado.html">Estado del arte</a></li>
+          <li><a href="/ecuaciones.html">Ecuaciones</a></li>
+          <li><a href="/galeria.html">Galería</a></li>
+          <li><a href="/contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- 🧩 CONTENIDO PRINCIPAL -->
   <main class="container">
-    <!-- HERO / INTRO -->
-    <section class="hero card">
-      <div>
-        <h1>Bobina de Tesla</h1>
-
-        <h2>¿Quién fue Nikola Tesla?</h2>
-        <p>
-          <strong>Nikola Tesla</strong> (1856–1943) fue un inventor y físico serbio-estadounidense conocido por sus aportes al desarrollo del sistema de corriente alterna (CA), el motor de inducción y por sus experimentos en alta frecuencia y alta tensión. Sus estudios sobre resonancia y transformadores de alta frecuencia llevaron al diseño de la <em>bobina de Tesla</em>.
-        </p>
-
-        <h2>Aportes destacados y cómo se llega a la bobina de Tesla</h2>
-        <ul>
-          <li>Desarrollo del sistema polifásico de corriente alterna, base para la transmisión eficiente de energía.</li>
-          <li>Diseño del motor de inducción y aportes a la teoría de máquinas eléctricas.</li>
-          <li>Investigaciones en resonancia eléctrica y transformadores resonantes.</li>
-          <li>Construcciones experimentales que desembocaron en la bobina: transformador resonante para generar alto voltaje y alta frecuencia.</li>
-        </ul>
-
-        <p class="muted">En la entrega final añadiremos mediciones, cálculos LC y comparación teoría/experimento.</p>
-      </div>
-
-      <!-- COLUMNA LATERAL: SVG placeholder FOTO TESLA + texto -->
-      <aside class="side-card">
-        <!-- SVG placeholder (si subes tesla.jpg después, reemplázalo por <img src="assets/tesla.jpg">) -->
-        <svg class="img-tesla" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Foto Nikola Tesla">
-          <rect width="100%" height="100%" rx="10" fill="#0b1724"/>
-          <g transform="translate(16,28)" fill="#cfe8ff" font-family="Segoe UI, Arial">
-            <text x="0" y="18" font-size="16" font-weight="700">Nikola Tesla</text>
-            <text x="0" y="40" font-size="12" fill="#94a3b8">(placeholder - sustituir por foto real)</text>
-          </g>
-        </svg>
-
-        <p style="font-size:14px;color:var(--muted);margin-top:10px">
-          Tesla exploró la resonancia eléctrica y el comportamiento de transformadores a alta frecuencia. La bobina es un ejemplo práctico de transformador resonante para estudiar descargas y campos eléctricos.
-        </p>
-      </aside>
+    <section class="content-box">
+      <h1>Bienvenido al Proyecto Bobina de Tesla</h1>
+      <p>Este proyecto tiene como objetivo comprender y experimentar los principios del electromagnetismo a través de la construcción de una bobina de Tesla funcional.</p>
     </section>
 
-    <!-- OBJETIVOS -->
-    <section class="content-box card">
-      <h2>Objetivos de la práctica</h2>
-      <ul>
-        <li>Construir una bobina de Tesla a pequeña escala como demostración de fenómenos electromagnéticos.</li>
-        <li>Determinar y comparar la frecuencia de resonancia experimental con la predicción teórica (cálculo LC).</li>
-        <li>Medir (cuando sea seguro) y documentar variaciones de tensión y características de las descargas.</li>
-        <li>Analizar el efecto de parámetros constructivos (número de espiras, geometría del toroide, capacitancia).</li>
-        <li>Aplicar normas de seguridad para el trabajo con alta tensión y documentar procedimientos.</li>
-      </ul>
+    <section class="content-box image-section">
+      <img src="assets/tesla.jpg" alt="Bobina de Tesla" class="img-tesla">
+      <p>La bobina de Tesla es un transformador resonante capaz de generar descargas eléctricas de alto voltaje, demostrando fenómenos de inducción y resonancia.</p>
     </section>
   </main>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- ⚙️ PIE DE PÁGINA -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II · [TU NOMBRE]</p>
-    </div>
+    <p>© 2025 Proyecto Bobina de Tesla — Universidad Tecnológica de Pereira</p>
   </footer>
 
-  <!-- Script pequeño: elimina nav.main-nav fuera del header si existe (seguridad) -->
+  <!-- 🧠 SCRIPT PARA EFECTO DE BARRA -->
   <script>
-    (function(){
-      try {
-        const navs = Array.from(document.querySelectorAll('nav.main-nav'));
-        if(navs.length > 1){
-          // preferir el nav dentro del header
-          let keep = navs.find(n => n.closest('header')) || navs[0];
-          navs.forEach(n => { if(n !== keep) n.remove(); });
-          console.log('Nav cleanup: removed duplicates, kept one.');
-        }
-      } catch(e){ console.warn('Nav cleanup failed', e); }
-    })();
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
   </script>
 </body>
 </html>
-
