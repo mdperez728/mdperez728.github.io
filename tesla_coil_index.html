@@ -1,0 +1,163 @@
+<!--
+Index.html - Plantilla lista para GitHub Pages
+Instrucciones rápidas:
+1) Crea un repositorio llamado: tuusuario.github.io (reemplaza tuusuario).
+2) Sube este archivo como `index.html` en la raíz del repo (Add file -> Upload files -> Commit).
+3) Espera ~1 minuto y visita: https://tuusuario.github.io (reemplaza tuusuario).
+
+Edítalo en cualquier editor de texto. Sustituye los marcadores: [TU NOMBRE], [CORREO INSTITUCIONAL], y añade imágenes en la sección /#galeria.
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bobina de Tesla - Proyecto Física II | [TU NOMBRE]</title>
+  <meta name="description" content="Proyecto final: Bobina de Tesla - explicación, estado del arte y resultados.">
+  <!-- MathJax para mostrar ecuaciones LaTeX -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" integrity="" crossorigin="anonymous"></script>
+
+  <style>
+    :root{--accent:#1f6feb;--bg:#0f1724;--card:#0b1220;--muted:#94a3b8}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#061025 0%, #07122b 100%);color:#e6eef8;line-height:1.5}
+    .container{max-width:1000px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),#7c3aed);font-weight:700}
+    nav ul{list-style:none;padding:0;margin:0;display:flex;gap:12px}
+    nav a{color:inherit;text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.03)}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px}
+    h1{margin:0;font-size:clamp(20px,3.6vw,32px)}
+    h2{margin:0 0 8px 0}
+    .muted{color:var(--muted)}
+
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .profile-img{width:100%;height:220px;background:linear-gradient(135deg,#0f1724,#0b1220);display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--muted)}
+
+    .section{margin-top:18px}
+    pre.math{background:rgba(0,0,0,0.25);padding:12px;border-radius:8px;overflow:auto}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media(max-width:880px){.grid-2{grid-template-columns:1fr}.logo{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TC</div>
+        <div>
+          <div class="muted">Proyecto</div>
+          <strong>Bobina de Tesla — Física II</strong>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#integrante">Integrante</a></li>
+          <li><a href="#descripcion">Descripción</a></li>
+          <li><a href="#estado">Estado del arte</a></li>
+          <li><a href="#ecuaciones">Ecuaciones</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero card">
+        <div>
+          <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
+          <p class="muted">Demostración experimental de fenómenos de electromagnetismo: inducción, resonancia y descargas de alta frecuencia. Proyecto para la materia Física II.</p>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p>Objetivo general: Construir y demostrar una bobina de Tesla en pequeña escala que permita observar y medir (de forma cualitativa y cuantitativa) los fenómenos de inducción electromagnética, resonancia y comportamiento de campos eléctricos y magnéticos en sistemas resonantes.</p>
+            <ul>
+              <li>Mostrar principios: Ley de Faraday, Ley de Lenz, resonancia y fuerza de Lorentz.</li>
+              <li>Registrar y documentar pruebas para el informe preliminar (fecha de entrega: próxima semana).</li>
+            </ul>
+          </div>
+          <aside class="card">
+            <div class="profile-img">[AQUÍ TU FOTO O LOGO]</div>
+            <p class="muted" style="margin-top:8px">Sube una foto tuya tipo presentación y tu nombre en la sección "Integrante".</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="integrante" class="section card">
+        <h2>Integrante</h2>
+        <p><strong>[TU NOMBRE]</strong> — Estudiante de Ingeniería de Sistemas</p>
+        <p class="muted">Correo institucional: [TU CORREO]</p>
+      </section>
+
+      <section id="descripcion" class="section card">
+        <h2>Descripción del proyecto y temas particulares</h2>
+        <p>La bobina de Tesla es un transformador resonante que, mediante acoplamiento inductivo entre un circuito primario y uno secundario, eleva la tensión y produce descargas de alta frecuencia. En este proyecto se estudiarán:</p>
+        <ol>
+          <li>Inducción electromagnética y ley de Faraday.</li>
+          <li>Resonancia entre primario y secundario (cálculo de frecuencia propia: circuitos LC).</li>
+          <li>Mediciones de voltaje y observación de descargas.</li>
+          <li>Seguridad eléctrica y buenas prácticas al trabajar con alta tensión.</li>
+        </ol>
+      </section>
+
+      <section id="estado" class="section card">
+        <h2>Estado del arte (resumen inicial)</h2>
+        <p>Breve historial y aplicaciones actuales: La bobina de Tesla fue desarrollada por Nikola Tesla a finales del siglo XIX. Hoy en día se usa con fines educativos, demostrativos y en estudios de transmisión inalámbrica de energía. A nivel académico, la investigación moderna se centra en optimizar la transferencia resonante y la eficiencia en sistemas sin contacto.</p>
+        <p class="muted">(Esta sección se debe ampliar con referencias y citas: artículos, libros y recursos web consultados — agrega aquí tu bibliografía.)</p>
+      </section>
+
+      <section id="ecuaciones" class="section card">
+        <h2>Ecuaciones y mediciones destacadas</h2>
+        <p>Incluye aquí las ecuaciones estudiadas en el curso relacionadas con electricidad y magnetismo, con interlineado 1.5 y letra 12 (estándar para el informe):</p>
+
+        <div style="margin-top:12px">
+          <p><strong>Ley de Faraday (fem inducida):</strong></p>
+          <pre class="math">\( \mathcal{E} = -N \dfrac{d\Phi_B}{dt} \)</pre>
+
+          <p><strong>Flujo magnético:</strong></p>
+          <pre class="math">\( \Phi_B = \int \vec{B} \cdot d\vec{A} \)</pre>
+
+          <p><strong>Campo magnético de una solenoide:</strong></p>
+          <pre class="math">\( B = \mu_0 \dfrac{N I}{L} \)</pre>
+
+          <p><strong>Frecuencia natural de un circuito LC:</strong></p>
+          <pre class="math">\( f_0 = \dfrac{1}{2\pi\sqrt{LC}} \)</pre>
+
+          <p><strong>Fuerza de Lorentz:</strong></p>
+          <pre class="math">\( \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) \)</pre>
+        </div>
+
+        <p class="muted">(En el informe final añade derivaciones, ejemplos numéricos y cómo aplicaste estas fórmulas en las mediciones de la maqueta.)</p>
+      </section>
+
+      <section id="galeria" class="section card">
+        <h2>Galería y avances</h2>
+        <p>Sube aquí fotos y videos de la construcción y pruebas. Recomendación: 3–6 fotos representativas (bobina primaria, secundaria, montaje, pruebas de descarga y equipo de medición).</p>
+        <div class="card">
+          <p class="muted">Placeholder: Reemplaza con miniaturas o inserta enlaces a archivos en tu repo o en GitHub.</p>
+        </div>
+      </section>
+
+      <section id="contacto" class="section card">
+        <h2>Contacto</h2>
+        <p>Profesor y revisión: comparte este enlace con tu profesor para que pueda dejar comentarios.</p>
+        <p class="muted">Correo: [TU CORREO] — GitHub: https://github.com/[TU_USUARIO]</p>
+      </section>
+
+    </main>
+
+    <footer>
+      Plantilla generada para el avance del proyecto — Bobina de Tesla · Física II · [TU NOMBRE]
+    </footer>
+  </div>
+</body>
+</html>
