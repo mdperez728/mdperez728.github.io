@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bobina de Tesla - Inicio</title>
-  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <!-- ENCABEZADO -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp">
+        <img src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp" />
         <div class="brand-text">
           <div class="muted">Proyecto</div>
           <strong class="project-title">Bobina de Tesla — Física II</strong>
@@ -36,49 +36,82 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container">
-    <section class="content-box">
-      <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
+    <!-- HERO / INTRO -->
+    <section class="hero">
+      <div>
+        <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
 
-      <h2>¿Quién fue Nikola Tesla?</h2>
-      <p>
-        Nikola Tesla (1856–1943) fue un inventor y físico serbio-estadounidense conocido por sus aportes al desarrollo del sistema de corriente alterna (CA), el motor de inducción y sus experimentos en alta frecuencia y alta tensión.
-        Tesla dedicó su vida a buscar métodos para transmitir energía sin cables y estudiar los efectos de los campos electromagnéticos, lo que finalmente lo llevó a la creación de la famosa <strong>bobina de Tesla</strong>.
-      </p>
+        <h2>¿Quién fue Nikola Tesla?</h2>
+        <p>
+          <strong>Nikola Tesla</strong> (1856–1943) fue un inventor y físico serbio-estadounidense
+          conocido por sus aportes al desarrollo del sistema de corriente alterna (CA), el motor de
+          inducción y por sus experimentos en alta frecuencia y alta tensión. Sus estudios sobre
+          resonancia y transformadores de alta frecuencia llevaron al diseño de la <em>bobina de Tesla</em>.
+        </p>
 
-      <h2>Aportes destacados y cómo se llega a la bobina de Tesla</h2>
-      <ul>
-        <li>Desarrollo del sistema polifásico de corriente alterna, base para la transmisión eficiente de energía eléctrica.</li>
-        <li>Diseño del motor de inducción, utilizado ampliamente en la industria moderna.</li>
-        <li>Investigación sobre resonancia eléctrica y transformadores de alta frecuencia.</li>
-        <li>Creación de la bobina de Tesla: un transformador resonante capaz de generar descargas eléctricas espectaculares y estudiar fenómenos de resonancia.</li>
-      </ul>
+        <h2>Aportes destacados y cómo se llega a la bobina de Tesla</h2>
+        <ul>
+          <li>Desarrollo del sistema polifásico de corriente alterna, base para la transmisión eficiente de energía.</li>
+          <li>Diseño del motor de inducción y aportes a la teoría de máquinas eléctricas.</li>
+          <li>Investigaciones en resonancia eléctrica y transformadores resonantes.</li>
+          <li>Construcciones experimentales que desembocaron en la bobina de Tesla: transformador resonante para generar alto voltaje y alta frecuencia.</li>
+        </ul>
+
+        <p class="muted">En la entrega final añadiremos mediciones, cálculos LC y comparaciones entre teoría y práctica.</p>
+      </div>
+
+      <!-- COLUMNA LATERAL: logo + foto + texto complementario -->
+      <aside class="side-card">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <img src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp" />
+          <div>
+            <div class="muted" style="font-size:12px">Proyecto</div>
+            <strong>Bobina de Tesla — Física II</strong>
+          </div>
+        </div>
+
+        <img src="assets/tesla.jpg" alt="Nikola Tesla" class="img-tesla" />
+
+        <p style="font-size:14px;color:var(--muted);margin-top:10px">
+          Tesla exploró la resonancia eléctrica y el comportamiento de transformadores a alta frecuencia.
+          La bobina es un ejemplo práctico de transformador resonante que permite estudiar descargas y campos eléctricos en alta frecuencia.
+        </p>
+      </aside>
     </section>
 
-    <!-- SECCIÓN CON IMAGEN Y DESCRIPCIÓN -->
-    <section class="content-box image-section">
-      <img src="assets/tesla.jpg" alt="Nikola Tesla" class="img-tesla">
-      <p>
-        La <strong>bobina de Tesla</strong> es una de las invenciones más representativas de su genio.
-        Fue diseñada para demostrar la transmisión inalámbrica de energía y estudiar el comportamiento de los campos eléctricos y magnéticos.
-        Su principio sigue siendo una base fundamental en tecnologías de radio, resonancia magnética y sistemas inalámbricos modernos.
-      </p>
-    </section>
-
-    <!-- SECCIÓN DE OBJETIVOS -->
+    <!-- OBJETIVOS -->
     <section class="content-box">
       <h2>Objetivos de la práctica</h2>
       <ul>
         <li>Construir una bobina de Tesla a pequeña escala como demostración de fenómenos electromagnéticos.</li>
-        <li>Analizar la resonancia y el comportamiento de los campos eléctricos y magnéticos en sistemas de alta frecuencia.</li>
-        <li>Aplicar principios de la Ley de Faraday, Ley de Lenz y fuerza de Lorentz.</li>
-        <li>Documentar y registrar mediciones experimentales que respalden los resultados obtenidos.</li>
+        <li>Determinar y comparar la frecuencia de resonancia experimental con la predicción teórica (cálculo LC).</li>
+        <li>Medir (cuando sea seguro) y documentar las variaciones de tensión y las características de las descargas.</li>
+        <li>Analizar el efecto de parámetros constructivos (número de espiras, geometría del toroide, capacitancia) en el rendimiento.</li>
+        <li>Aplicar normas de seguridad para el trabajo con alta tensión y documentar procedimientos de protección.</li>
       </ul>
     </section>
   </main>
 
   <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
-    <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II</p>
+    <div class="container">
+      <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II · [TU NOMBRE]</p>
+    </div>
   </footer>
+
+  <!-- SCRIPT: elimina nav.main-nav duplicados (seguridad por si existe más de uno) -->
+  <script>
+    (function(){
+      try {
+        const navs = Array.from(document.querySelectorAll('nav.main-nav'));
+        if(navs.length > 1){
+          // preferir el que está dentro del header
+          let keep = navs.find(n => n.closest('header')) || navs[0];
+          navs.forEach(n => { if(n !== keep) n.remove(); });
+          console.log('Navegaciones duplicadas eliminadas, conservada una.');
+        }
+      } catch(e) { console.warn('Nav cleanup error', e); }
+    })();
+  </script>
 </body>
 </html>
