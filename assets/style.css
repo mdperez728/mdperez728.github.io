@@ -1,0 +1,182 @@
+/* 🎨 Variables de color base */
+:root {
+  --accent: #1f6feb;
+  --bg: #061025;
+  --card: #07122b;
+  --muted: #94a3b8;
+  --text: #e6eef8;
+}
+
+/* 🔄 Reset general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #07112a);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 🧱 Contenedor general */
+.container {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 20px;
+}
+
+/* 🧭 ENCABEZADO */
+.site-header {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 16px;
+}
+
+/* 🔹 Logo y texto */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-utp {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text .muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 📋 Navegación */
+.main-nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 🧩 Secciones */
+.content-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-box h1,
+.content-box h2 {
+  color: #7ca9ff;
+  margin-bottom: 10px;
+}
+
+.content-box ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.content-box li {
+  margin-bottom: 6px;
+}
+
+/* 🖼️ Imagen de Tesla */
+.image-section {
+  text-align: center;
+}
+
+.img-tesla {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ⚙️ Footer */
+.site-footer {
+  padding: 18px;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 880px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .logo-utp {
+    width: 44px;
+    height: 44px;
+  }
+
+  .project-title {
+    font-size: 0.95rem;
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+}
