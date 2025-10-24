@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -8,16 +8,21 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- ENCABEZADO -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="logo">TC</div>
+        <!-- LOGO UNIVERSIDAD -->
+        <img src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp">
+
+        <!-- TEXTO DE PROYECTO -->
         <div class="brand-text">
           <div class="muted">Proyecto</div>
           <strong>Bobina de Tesla — Física II</strong>
         </div>
       </div>
 
+      <!-- MENÚ DE NAVEGACIÓN -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html" class="active">Inicio</a></li>
@@ -32,66 +37,51 @@
     </div>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="container">
-    <!-- HERO actualizado: biografía de Tesla + logo + foto -->
-    <section class="hero card">
-      <div>
-        <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
+    <section class="content-box">
+      <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
 
-        <!-- BIOGRAFÍA CORTA -->
-        <h3>¿Quién fue Nikola Tesla?</h3>
-        <p>
-          <strong>Nikola Tesla</strong> (1856–1943) fue un inventor y físico serbio-estadounidense cuyo trabajo transformó la ingeniería eléctrica moderna. Es célebre por desarrollar y promover el sistema de corriente alterna (CA), inventar el motor de inducción y explorar la generación de altas frecuencias y tensiones. Sus experimentos con transformadores resonantes y descargas eléctricas llevaron al diseño de lo que hoy conocemos como la <em>bobina de Tesla</em>.
-        </p>
+      <h2>¿Quién fue Nikola Tesla?</h2>
+      <p>
+        Nikola Tesla (1856–1943) fue un inventor y físico serbio-estadounidense conocido por sus aportes al desarrollo del sistema de corriente alterna (CA), el motor de inducción y sus experimentos en alta frecuencia y alta tensión. 
+        Tesla dedicó su vida a buscar métodos para transmitir energía sin cables y estudiar los efectos de los campos electromagnéticos, lo que finalmente lo llevó a la creación de la famosa <strong>bobina de Tesla</strong>.
+      </p>
 
-        <h3>Aportes clave y cómo se llega a la bobina</h3>
-        <ul>
-          <li>Desarrollo y estandarización del sistema polifásico de corriente alterna para transmisión eficiente de energía.</li>
-          <li>Diseño del motor de inducción y estudios sobre campos magnéticos variables y su control.</li>
-          <li>Investigaciones en alta frecuencia y transformadores resonantes que posibilitaron dispositivos capaces de generar alto voltaje a frecuencias elevadas: la bobina de Tesla nace de estos experimentos.</li>
-        </ul>
-
-        <p class="muted">En la versión final se incluirán mediciones cuantitativas, cálculos de resonancia y comparaciones entre teoría y práctica.</p>
-      </div>
-
-      <!-- COLUMNA DERECHA: logo uni + foto de Tesla + texto complementario -->
-      <aside class="side-card">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <!-- Asegúrate de subir assets/logo-uni.png -->
-          <img src="assets/logo-uni.png" alt="Logo Universidad" class="uni-logo">
-          <div>
-            <div class="muted" style="font-size:12px">Proyecto</div>
-            <strong>Bobina de Tesla — Física II</strong>
-          </div>
-        </div>
-
-        <!-- Asegúrate de subir assets/tesla.jpg -->
-        <img src="assets/tesla.jpg" alt="Nikola Tesla" class="tesla-photo" style="margin-bottom:10px">
-
-        <p style="font-size:14px;color:var(--muted)">
-          Nikola Tesla realizó experimentos con bobinas resonantes y descargas que demostraban efectos de alta tensión y alta frecuencia. La imagen complementa la biografía y sirve como referencia visual de su trabajo experimental.
-        </p>
-      </aside>
+      <h2>Aportes destacados y cómo se llega a la bobina de Tesla</h2>
+      <ul>
+        <li>Desarrollo del sistema polifásico de corriente alterna, base para la transmisión eficiente de energía eléctrica.</li>
+        <li>Diseño del motor de inducción, utilizado ampliamente en la industria moderna.</li>
+        <li>Investigación sobre resonancia eléctrica y transformadores de alta frecuencia.</li>
+        <li>Creación de la bobina de Tesla: un transformador resonante capaz de generar descargas eléctricas espectaculares y estudiar fenómenos de resonancia.</li>
+      </ul>
     </section>
 
-    <!-- OBJETIVOS (reemplaza la antigua sección 'Avance preliminar') -->
-    <section class="cards">
-      <article class="card">
-        <h2>Objetivos de la práctica</h2>
-        <ul>
-          <li><strong>Demostrar</strong> los principios de la inducción electromagnética (Ley de Faraday y Ley de Lenz) mediante la construcción y operación de una bobina de Tesla a pequeña escala.</li>
-          <li><strong>Determinar</strong> la frecuencia de resonancia del sistema primario-secundario y comparar el valor experimental con la predicción teórica usando la fórmula de un circuito LC.</li>
-          <li><strong>Medir</strong> (cualitativa y, cuando sea seguro, cuantitativamente) las variaciones de tensión entre primario y secundario y documentar las características de las descargas observadas.</li>
-          <li><strong>Analizar</strong> cómo parámetros constructivos (número de espiras, geometría del toroide, capacitancia) afectan la transferencia resonante y el comportamiento del sistema.</li>
-          <li><strong>Aplicar</strong> medidas y protocolos de seguridad para el trabajo con alta tensión y proteger tanto al operador como al equipo experimental.</li>
-        </ul>
-      </article>
+    <!-- SECCIÓN CON IMAGEN Y DESCRIPCIÓN -->
+    <section class="content-box image-section">
+      <img src="assets/tesla.jpg" alt="Nikola Tesla" class="img-tesla">
+      <p>
+        La <strong>bobina de Tesla</strong> es una de las invenciones más representativas de su genio. 
+        Fue diseñada para demostrar la transmisión inalámbrica de energía y estudiar el comportamiento de los campos eléctricos y magnéticos. 
+        Su principio sigue siendo una base fundamental en tecnologías de radio, resonancia magnética y sistemas inalámbricos modernos.
+      </p>
     </section>
 
+    <!-- SECCIÓN DE OBJETIVOS -->
+    <section class="content-box">
+      <h2>Objetivos de la práctica</h2>
+      <ul>
+        <li>Construir una bobina de Tesla a pequeña escala como demostración de fenómenos electromagnéticos.</li>
+        <li>Analizar la resonancia y el comportamiento de los campos eléctricos y magnéticos en sistemas de alta frecuencia.</li>
+        <li>Aplicar principios de la Ley de Faraday, Ley de Lenz y fuerza de Lorentz.</li>
+        <li>Documentar y registrar mediciones experimentales que respalden los resultados obtenidos.</li>
+      </ul>
+    </section>
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
-    <div class="container">Bobina de Tesla · Física II · Proyecto de [TU NOMBRE]</div>
+    <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II</p>
   </footer>
 </body>
 </html>
