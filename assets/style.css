@@ -46,45 +46,39 @@ html,body{height:100%;font-family:Inter,system-ui,Arial;background:linear-gradie
   .profile{flex-direction:column}
   .logo{width:40px;height:40px}
 }
-.uni-logo{
-  width:56px;
-  height:56px;
-  object-fit:contain;
-  border-radius:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
-  background:linear-gradient(135deg,var(--accent),#7c3aed);
-  padding:6px;
+ .logo-utp {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  margin-right: 10px;
+  object-fit: contain;
+  background: transparent;
 }
 
-/* Ajuste del hero para que tenga 2 columnas en desktop */
-.hero{
-  padding:28px;
-  border-radius:12px;
-  background:rgba(255,255,255,0.02);
-  display:grid;
-  grid-template-columns:1fr 320px;
-  gap:20px;
-  align-items:start;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Si se usa la foto de Tesla en la columna derecha */
-.tesla-photo{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+.img-tesla {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
 }
 
-/* Tarjeta descriptiva al lado de la foto */
-.side-card{
-  background:rgba(255,255,255,0.015);
-  padding:14px;
-  border-radius:10px;
+.image-section {
+  text-align: center;
 }
 
-/* Ajustes responsive */
-@media (max-width:880px){
-  .hero{grid-template-columns:1fr}
-  .uni-logo{width:48px;height:48px}
+.site-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
