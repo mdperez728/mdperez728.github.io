@@ -46,39 +46,45 @@ html,body{height:100%;font-family:Inter,system-ui,Arial;background:linear-gradie
   .profile{flex-direction:column}
   .logo{width:40px;height:40px}
 }
- .logo-utp {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  margin-right: 10px;
-  object-fit: contain;
-  background: transparent;
+/* Ajustes específicos del header y brand para alinear logo y texto en una sola línea */
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+
+/* logo UTP (imagen real) */
+.logo-utp {
+  width:56px;
+  height:56px;
+  border-radius:8px;
+  object-fit:contain;
+  display:block;
+  background:transparent;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* brand-text en línea, evitar saltos */
+.brand { display:flex; align-items:center; gap:12px; min-width:0; }
+.brand-text { display:flex; flex-direction:column; line-height:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.brand-text .muted { font-size:12px; color:var(--muted); }
+
+/* Evitar que el título de proyecto rompa en varias líneas si hay espacio */
+.project-title { white-space:nowrap; font-weight:700; font-size:1rem; }
+
+/* Forzar que la nav no empuje el brand: permitir que la nav haga scroll horizontal si falta espacio */
+.main-nav { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.main-nav ul { display:flex; gap:14px; align-items:center; margin:0; padding:0; list-style:none; }
+
+/* Ajustes visuales del item activo (menos alto) */
+.main-nav a { padding:8px 10px; border-radius:8px; display:inline-block; }
+.main-nav a.active { background: rgba(255,255,255,0.04); }
+
+/* Reduce el gap en pantallas pequeñas para que todo quepa */
+@media (max-width:900px) {
+  .logo-utp { width:44px; height:44px; }
+  .project-title { font-size:0.95rem; }
+  .main-nav ul { gap:10px; }
 }
 
-.img-tesla {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 10px auto;
-}
-
-.image-section {
-  text-align: center;
-}
-
-.site-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  font-size: 0.9rem;
-  color: #ccc;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* Si la imagen sigue rota, muestra un fallback visual agradable */
+.logo-utp:empty, .logo-utp[onerror] {
+  background:linear-gradient(135deg,var(--accent),#7c3aed);
 }
 
