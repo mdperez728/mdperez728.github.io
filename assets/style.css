@@ -1,4 +1,4 @@
-/* 🎨 Variables de color base */
+/* 🌈 Variables base */
 :root {
   --accent: #1f6feb;
   --bg: #061025;
@@ -20,25 +20,31 @@ html, body {
   background: linear-gradient(180deg, var(--bg), #07112a);
   color: var(--text);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* 🧱 Contenedor general */
+/* 🧱 Contenedor */
 .container {
   max-width: 1000px;
-  margin: 28px auto;
+  margin: 0 auto;
   padding: 20px;
 }
 
 /* 🧭 ENCABEZADO */
 .site-header {
-  background: var(--card);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  position: fixed;        /* ✅ Fijo, no se mueve */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background: transparent; /* ✨ Transparente al inicio */
+  transition: all 0.4s ease;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.site-header.scrolled {
+  background: rgba(7, 17, 43, 0.95); /* 💎 Fonde oscuro al bajar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .header-inner {
@@ -61,7 +67,6 @@ html, body {
   height: 52px;
   object-fit: contain;
   border-radius: 8px;
-  background: transparent;
 }
 
 .brand-text {
@@ -82,15 +87,9 @@ html, body {
 }
 
 /* 📋 Navegación */
-.main-nav {
-  flex-grow: 1;
-  text-align: right;
-}
-
 .main-nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   gap: 14px;
   flex-wrap: wrap;
 }
@@ -100,7 +99,7 @@ html, body {
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 8px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .main-nav a:hover,
@@ -108,18 +107,18 @@ html, body {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* 🧩 Secciones */
+/* 🚨 Compensar header fijo */
+main {
+  padding-top: 120px;
+}
+
+/* 📦 Secciones */
 .content-box {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 24px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* 🚨 Compensar el header fijo */
-main {
-  padding-top: 110px;
 }
 
 .content-box h1,
@@ -137,7 +136,7 @@ main {
   margin-bottom: 6px;
 }
 
-/* 🖼️ Imagen de Tesla */
+/* 🖼️ Imagen */
 .image-section {
   text-align: center;
 }
