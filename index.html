@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Bobina de Tesla - Inicio</title>
-  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="description" content="Proyecto Bobina de Tesla - Página de inicio">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header id="navbar" class="site-header">
-    <div class="header-inner container">
+  <!-- ENCABEZADO -->
+  <header class="site-header">
+    <div class="container header-inner">
       <div class="brand">
-        <!-- Imagen real preferible: assets/logo-uni.png -->
-        <img id="logo-img" src="assets/logo-uni.png" alt="Logo UTP" class="logo-utp"
-             onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block'">
-        <!-- Fallback SVG si no subiste logo-uni.png -->
-        <svg id="logo-fallback" class="logo-utp" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
-          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1f6feb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
-          <rect rx="14" ry="14" width="100" height="100" fill="url(#g1)"/>
-          <text x="50" y="58" font-family="Segoe UI, Arial" font-weight="700" font-size="34" text-anchor="middle" fill="#fff">UTP</text>
-        </svg>
-
-        <div class="brand-text" title="Bobina de Tesla — Física II">
+        <div class="logo">TC</div>
+        <div class="brand-text">
           <div class="muted">Proyecto</div>
-          <strong class="project-title">Bobina de Tesla — Física II</strong>
+          <strong>Bobina de Tesla — Física II</strong>
         </div>
       </div>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <nav class="main-nav">
         <ul>
           <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="integrante.html">Integrante</a></li>
@@ -42,96 +34,48 @@
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="container">
-    <!-- HERO -->
-    <section class="hero card">
-      <div class="hero-main">
-        <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
+    <section class="hero">
+      <h1>Bobina de Tesla (Maqueta a pequeña escala)</h1>
 
-        <h2>¿Quién fue Nikola Tesla?</h2>
-        <p>
-          <strong>Nikola Tesla</strong> (1856–1943) fue un inventor y físico serbio-estadounidense.
-          Fue pionero en la corriente alterna (CA), el motor de inducción y en experimentos de alta frecuencia y alta tensión.
-          Sus investigaciones sobre resonancia y transformadores resonantes llevaron al desarrollo de la <em>bobina de Tesla</em>.
-        </p>
+      <h2>¿Quién fue Nikola Tesla?</h2>
+      <p>
+        Nikola Tesla (1856–1943) fue un inventor y físico serbio-estadounidense conocido por sus aportes al desarrollo del sistema de corriente alterna (CA), el motor de inducción y sus experimentos en alta frecuencia y alta tensión. 
+        Tesla dedicó su vida a buscar métodos para transmitir energía sin cables y estudiar los efectos de los campos electromagnéticos, lo que finalmente lo llevó a la creación de la famosa <strong>bobina de Tesla</strong>.
+      </p>
 
-        <h3>Aportes clave y cómo se llega a la bobina</h3>
-        <ul>
-          <li>Desarrollo del sistema polifásico de corriente alterna para transmisión eficiente de energía.</li>
-          <li>Diseño del motor de inducción y estudios sobre campos magnéticos variables.</li>
-          <li>Investigación en resonancia eléctrica y transformadores de alta frecuencia.</li>
-          <li>Construcciones experimentales que desembocaron en la bobina: transformador resonante para generar alto voltaje a alta frecuencia.</li>
-        </ul>
-
-        <p class="muted">En la entrega final añadiremos mediciones, cálculos LC y la comparación teoría/experimento.</p>
-      </div>
-
-      <aside class="side-card">
-        <!-- Foto real preferible: assets/tesla.jpg -->
-        <img id="tesla-img" src="assets/tesla.jpg" alt="Nikola Tesla" class="img-tesla"
-             onerror="this.style.display='none';document.getElementById('tesla-fallback').style.display='block'">
-        <!-- Fallback SVG placeholder -->
-        <svg id="tesla-fallback" class="img-tesla" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
-          <rect width="100%" height="100%" rx="10" fill="#071028"/>
-          <g transform="translate(16,28)" fill="#cfe8ff" font-family="Segoe UI, Arial">
-            <text x="0" y="18" font-size="16" font-weight="700">Nikola Tesla</text>
-            <text x="0" y="40" font-size="12" fill="#94a3b8">(sustituir por foto real)</text>
-          </g>
-        </svg>
-
-        <p style="font-size:14px;color:var(--muted);margin-top:10px">
-          Tesla exploró la resonancia eléctrica y el comportamiento de transformadores a alta frecuencia.
-          La bobina de Tesla es un transformador resonante que permite estudiar descargas y campos eléctricos en alta frecuencia.
-        </p>
-      </aside>
+      <h2>Aportes destacados y cómo se llega a la bobina de Tesla</h2>
+      <ul>
+        <li>Desarrollo del sistema polifásico de corriente alterna, base para la transmisión eficiente de energía eléctrica.</li>
+        <li>Diseño del motor de inducción, utilizado ampliamente en la industria moderna.</li>
+        <li>Investigación sobre resonancia eléctrica y transformadores de alta frecuencia.</li>
+        <li>Creación de la bobina de Tesla: un transformador resonante capaz de generar descargas eléctricas espectaculares y estudiar fenómenos de resonancia.</li>
+      </ul>
     </section>
 
-    <!-- OBJETIVOS -->
-    <section class="content-box card">
+    <section class="card">
+      <p>
+        La <strong>bobina de Tesla</strong> es una de las invenciones más representativas de su genio. 
+        Fue diseñada para demostrar la transmisión inalámbrica de energía y estudiar el comportamiento de los campos eléctricos y magnéticos. 
+        Su principio sigue siendo una base fundamental en tecnologías de radio, resonancia magnética y sistemas inalámbricos modernos.
+      </p>
+    </section>
+
+    <section class="card">
       <h2>Objetivos de la práctica</h2>
       <ul>
         <li>Construir una bobina de Tesla a pequeña escala como demostración de fenómenos electromagnéticos.</li>
-        <li>Determinar y comparar la frecuencia de resonancia experimental con la predicción teórica (cálculo LC).</li>
-        <li>Medir y documentar las variaciones de tensión entre primario y secundario (cuando sea seguro).</li>
-        <li>Analizar el efecto de parámetros constructivos (número de espiras, geometría del toroide, capacitancia).</li>
-        <li>Aplicar normas de seguridad para el trabajo con alta tensión y documentar procedimientos.</li>
+        <li>Analizar la resonancia y el comportamiento de los campos eléctricos y magnéticos en sistemas de alta frecuencia.</li>
+        <li>Aplicar principios de la Ley de Faraday, Ley de Lenz y fuerza de Lorentz.</li>
+        <li>Documentar y registrar mediciones experimentales que respalden los resultados obtenidos.</li>
       </ul>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II · [TU NOMBRE]</p>
-    </div>
+    <p>© 2025 Universidad Tecnológica de Pereira — Proyecto de Física II</p>
   </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    // 1) Evita nav duplicadas (si hay más de una). Conserva la que esté dentro del header.
-    (function(){
-      try {
-        const navs = Array.from(document.querySelectorAll('nav.main-nav'));
-        if(navs.length > 1){
-          let keep = navs.find(n => n.closest('header')) || navs[0];
-          navs.forEach(n => { if(n !== keep) n.remove(); });
-          console.log('Nav cleanup: removed duplicates.');
-        }
-      } catch(e){ console.warn('Nav cleanup error', e); }
-    })();
-
-    // 2) Efecto header: transparente arriba → sólido al hacer scroll
-    (function(){
-      const navbar = document.getElementById('navbar');
-      const onScroll = () => {
-        if(window.scrollY > 60) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-      };
-      window.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-    })();
-  </script>
 </body>
 </html>
-
